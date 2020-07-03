@@ -12,4 +12,4 @@ Worked and iterated concepts related to higher order functions in Javascript. A 
 
 # Upload Date: 03, July, 2020
 
-# Part of [Wes Bos's](https://wesbos.com/) #Javascript30days course.
+## Part of [Wes Bos's](https://wesbos.com/)  #Javascript30days course.
