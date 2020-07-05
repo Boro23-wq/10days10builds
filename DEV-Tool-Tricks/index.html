@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DEV Console Tricks!</title>
+</head>
+
+<body>
+
+  <p onClick="makeGreen()">Click ME</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('this is a regular console.log');
+
+    // Interpolated
+    console.log('Hello I am an %s string!', 'interpolated');
+    const string = 'Liverpool is my favorite football team'
+    const githubUsername = 'Boro23-wq'
+    console.log(`I am ${githubUsername} and ${string}`)
+
+    // Styled
+    console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // warning!
+    console.warn('this is a console warning!');
+
+    // Error :|
+    console.error('There is an error to be handled');
+
+    // Info
+    console.info('Just an info!');
+
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('doiexist'), 'That is wrong!');
+
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    console.dir(p);
+
+    console.clear();
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+
+    console.count('23')
+    console.count('23')
+    console.count('23')
+    console.count('23')
+    console.count('23')
+    console.count('Boro')
+    console.count('Boro')
+    console.count('Boro')
+    console.count('Boro')
+
+    // timing
+    // console.table(dogs);
+    console.time('fetching some data')
+    fetch('')
+      .then((data) => data.json())
+      .then((data) => {
+        console.timeEnd('fetching some data')
+        console.log(data)
+      })
+  </script>
+</body>
+
+</html>
