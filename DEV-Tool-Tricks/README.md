@@ -14,7 +14,7 @@ Cool DEV Tricks for deugging or testing in the console.
 * console.assert()
 * console.clear()
 * console.dir()
-* console.group() || console.groupEnd() || consoe.groupCollapsed
+* console.group() || console.groupEnd() || console.groupCollapsed
 * console.count()
 * console.time()
 
