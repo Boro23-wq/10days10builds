@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reference VS Copy</title>
+</head>
+
+<body>
+
+  <h3>Look into your console...</h3>
+
+  <script>
+    //Numbers
+    let age = 20;
+    let age2 = age;
+
+    console.log(age, age2)
+    age = 55;
+    console.log(age, age2)
+
+    //Strings
+    let lastName = 'Boro'
+    let lastName1 = lastName
+
+    console.log(lastName, lastName1)
+    lastName = 'Phoenix'
+    console.log(lastName, lastName1)
+
+    //Boolean
+    let iAmGoingOut = true
+    let iAmEatingOut = iAmGoingOut
+
+    console.log(iAmGoingOut, iAmEatingOut)
+    iAmEatingOut = false
+    console.log(iAmGoingOut, iAmEatingOut)
+
+    // Array
+    let team = ['Liverpool', 'Man City', 'Mann United', 'Chelsea', 'Tottenham']
+
+    let anotherTeam = team //copy of the team
+    // we changed our mind and another team should have one more team
+    //lets add that
+    anotherTeam[5] = 'Leicester City'
+
+    // console.log(team, anotherTeam)
+    //uh oh! we see the main array i.e. team has also been altered due to references
+
+    //how do we fix that, well we have several options here
+    //option 
+    let team = ['Liverpool', 'Man City', 'Mann United', 'Chelsea', 'Tottenham']
+    let anotherTeam = team.slice() //use slice to copy the array
+    anotherTeam = Array.from(team) //from method
+    anotherTeam = [].concat(team) //concat method
+    anotherTeam = [...team] //es6 spread operator
+    console.log(anotherTeam)
+
+    //Objects
+
+    let supercar = {
+      name: 'Henessey Venom GT',
+      engine: '427 cu in twin-turbocharged LS7...',
+      cost: '$1.2 mills',
+      specs: {
+        topspeed: '265.57 mph (427.4 km/h)',
+        hp: 1244,
+        bodystyle: '2-door-coupe'
+      }
+    }
+
+    let thesamesupercar = supercar;
+
+    thesamesupercar.name = 'Lamborghini Aventador'
+
+    console.log(supercar, thesamesupercar)
+    //uh oh that changed the original array as well
+
+    //how do we copy the array in this case
+    // we can do this using Object.assign
+    let anothersamesupercar = Object.assign({}, supercar)
+    console.log(supercar, anothersamesupercar)
+    let anotherSupercar = Object.assign({}, supercar, { name: 'Buggatti Chiron' })
+    console.log(supercar, anotherSupercar)
+
+    // // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    let supercar = {
+      name: 'Henessey Venom GT',
+      engine: '427 cu in twin-turbocharged LS7...',
+      cost: '$1.2 mills',
+      specs: {
+        topspeed: '265.57 mph (427.4 km/h)',
+        hp: 1244,
+        bodystyle: '2-door-coupe'
+      }
+    }
+
+    const superCar = JSON.parse(JSON.stringify(supercar));
+
+  </script>
+
+</body>
+
+</html>
