@@ -1,8 +1,9 @@
 # 10days10builds
-Build projects constantly for 10 days. Inspired by [Florin Pop](https://www.florin-pop.com/blog/2019/09/100-days-100-projects) and [Kalle Hadden's](https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ) #100days100projects challenge.
+Build projects constantly for 10 days. Inspired by [Florin Pop](https://www.florin-pop.com/blog/2019/09/100-days-100-projects), [Kalle Hadden's](https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ) and [Wes Bos's](https://wesbos.com/) #100days100projects and #JavaScript30 challenge respectively.
 
 # Sole Purpose
 * Build mini projects to upskill and develop my programming foundations. 
+* Learn fundamental concepts of JavaScript (e.g. Array Methods)
 * Get better at JavaScript.
 * Get better with JavaScript Higher order functions.
 * Get coherent and easy with the Javascript es6 syntax.
